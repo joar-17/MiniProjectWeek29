@@ -6,14 +6,10 @@ namespace MiniProjectWeek29
 {
     internal class Currency
     {
-        public string CurrencyCode { get; set; }
-        public string CurrencySymbol { get; set; }
-        public double ConversionRate { get; set; }
+        public string CurrencyCode { get; }
+        public string CurrencySymbol { get; }
+        public double ConversionRate { get; }
 
-        public Currency() 
-        {
-
-        }
 
         public Currency(string currencycode, string currencySymbol, double conversionRate)
         {

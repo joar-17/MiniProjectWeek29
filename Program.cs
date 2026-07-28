@@ -2,26 +2,29 @@
 using MiniProjectWeek29;
 using System.Diagnostics;
 
-Console.WriteLine("Welcome to Asset Tracker\n");
-Console.WriteLine("Please read introduction carefully.");
-Console.WriteLine("This application enables the user to see, search for and sort assets belonging to the company as well as adding new ones.\n");
+Console.WriteLine("Welcome to Asset Tracker \n");
+Console.WriteLine("Please read introduction carefully. \n");
+Console.WriteLine("This application holds the information of the company assets.");
+Console.WriteLine("It enables the user to search for, add, uppdate and delete assets \n");
 Console.WriteLine("The company has six offices:");
 Console.WriteLine("Austin, USA");
 Console.WriteLine("Raleigh, USA");
 Console.WriteLine("Görlitz, Germany");
 Console.WriteLine("Sharjah, UAE");
 Console.WriteLine("Sendai, Japan");
-Console.WriteLine("Sundsvall, Sweden\n");
-Console.WriteLine("When adding or sorting assets, enter the options provided in the instructions.");
-Console.WriteLine("If no options are given, the user can enter any text.");
-Console.WriteLine("Remember that the system is case sensitive! \n");
-
+Console.WriteLine("Sundsvall, Sweden");
 
 while (true)
 {
-    Console.WriteLine("\n0 - Exit \n1 - Add asset \n2 - Uppdate asset \n3 - Show all assets \n4 - Search for assets \n5 - Generate report \n\n");
+    Console.WriteLine("\n0 - Exit");
+    Console.WriteLine("1 - Add asset");
+    Console.WriteLine("2 - Uppdate asset");
+    Console.WriteLine("3 - Delete asset");
+    Console.WriteLine("4 - Show all assets");
+    Console.WriteLine("5 - Search for assets");
+    Console.WriteLine("6 - Generate report \n");
     Console.Write("Choose option: ");
-    string userInput = Console.ReadLine();
+    string? userInput = Console.ReadLine();
 
     if (userInput == "0")
     {
@@ -32,24 +35,25 @@ while (true)
     switch (userInput)
     {
         case "1":
-            Menu.AddAsset();
+            MenuCRUD.AddAsset();
             break;
         case "2":
-            Menu.UpdateAsset();
+            MenuCRUD.UpdateAsset();
             break;
         case "3":
-            Menu.PrintAll();
+            MenuCRUD.DeleteAsset();
             break;
         case "4":
-            Menu.Search();
+            MenuFunctions.PrintAll();
             break;
         case "5":
-            Menu.Report();
+            MenuFunctions.Search();
+            break;
+        case "6":
+            MenuFunctions.Report();
             break;
         default:
             Console.WriteLine("\u001b[31mInvalid input\u001b[0m \n");
             break;
     }
 }
-
-

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MiniProjectWeek29.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreation : Migration
+    public partial class Initialmigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

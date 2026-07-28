@@ -12,8 +12,8 @@ using MiniProjectWeek29;
 namespace MiniProjectWeek29.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20260717143605_Initial Creation")]
-    partial class InitialCreation
+    [Migration("20260728144029_Initial migration")]
+    partial class Initialmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
