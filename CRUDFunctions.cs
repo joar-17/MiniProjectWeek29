@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MiniProjectWeek29
+﻿namespace MiniProjectWeek29
 {
     internal class MenuCRUD
     {
@@ -129,8 +125,6 @@ namespace MiniProjectWeek29
                 {
                     return;
                 }
-
-                
             }
             catch (Exception ex)
             {
@@ -195,7 +189,9 @@ namespace MiniProjectWeek29
             }
             catch (Exception ex)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(ex);
+                Console.ResetColor();
             }
         }
 
@@ -203,7 +199,6 @@ namespace MiniProjectWeek29
         {
             try
             {
-                Console.WriteLine("Enter new value to fields you want to change. If you wish to keep the value at a certain field, just press Enter.");
                 Console.Write("Write ID: ");
                 string? idInput = Console.ReadLine();
 
@@ -228,6 +223,7 @@ namespace MiniProjectWeek29
                     return;
                 }
 
+                Console.WriteLine("Enter new value to fields you want to change. If you wish to keep the value, leave field empty.\n");
                 Console.Write("Enter brand: ");
                 string? brand = Console.ReadLine();
                 if (!string.IsNullOrWhiteSpace(brand))
@@ -319,7 +315,9 @@ namespace MiniProjectWeek29
             }
             catch (Exception ex)
             {
+                Console.ForegroundColor= ConsoleColor.Red;
                 Console.WriteLine(ex.Message);
+                Console.ResetColor();
             }
         }
     }

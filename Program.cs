@@ -1,11 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MiniProjectWeek29;
-using System.Diagnostics;
+﻿using MiniProjectWeek29;
 
 Console.WriteLine("Welcome to Asset Tracker \n");
 Console.WriteLine("Please read introduction carefully. \n");
 Console.WriteLine("This application holds the information of the company assets.");
-Console.WriteLine("It enables the user to search for, add, uppdate and delete assets \n");
+Console.WriteLine("It enables the user to search for, add, uppdate and delete assets. \n");
 Console.WriteLine("The company has six offices:");
 Console.WriteLine("Austin, USA");
 Console.WriteLine("Raleigh, USA");

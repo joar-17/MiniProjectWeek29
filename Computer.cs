@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MiniProjectWeek29
+﻿namespace MiniProjectWeek29
 {
     internal class Computer : Asset
     {

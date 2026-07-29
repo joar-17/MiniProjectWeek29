@@ -1,17 +1,4 @@
-﻿using Azure.Core.GeoJson;
-using Microsoft.EntityFrameworkCore;
-using NanoidDotNet;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Globalization;
-using System.Linq.Expressions;
-using System.Net.NetworkInformation;
-using System.Security;
-using System.Text;
-using System.IO;
-using Azure;
-using System.Text.Json;
+﻿using Microsoft.EntityFrameworkCore;
 
 
 namespace MiniProjectWeek29
@@ -39,6 +26,7 @@ namespace MiniProjectWeek29
             try
             {
                 Console.WriteLine();
+                Console.WriteLine("User can search for Brand, Model, Office, Status, Asset type, Purchase year or Country");
                 Console.Write("Enter search keyword: ");
                 string? searchInput = Console.ReadLine();
 
@@ -117,7 +105,7 @@ namespace MiniProjectWeek29
                 {
                     Currency currency = temporaryList.First().Currency;
                     double totalValueLocal = totalValue * currency.ConversionRate;
-                    Console.WriteLine($"Total value in local currency: {totalValueLocal} {currency.CurrencySymbol}");
+                    Console.WriteLine($"Total value in local currency: {totalValueLocal.ToString("0.00")} {currency.CurrencySymbol}");
                 }
 
                 int numberOfAssets = temporaryList.Count();
